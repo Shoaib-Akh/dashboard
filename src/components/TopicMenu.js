@@ -2,6 +2,7 @@ import React from "react";
 import { Menu } from "antd";
 import CategoryActive from "../../src/asset/category.svg";
 import "../components/SideBar/SideBar.scss"
+import { NavLink } from "react-router-dom";
 
 
 const TopicMenu = ({ topics, selectedKey, changeSelectedKey }) => {
@@ -16,10 +17,15 @@ const TopicMenu = ({ topics, selectedKey, changeSelectedKey }) => {
         mode="inline"
         defaultSelectedKeys={['1']}
       >
-        <Menu.Item key='1' icon={<div> <img src={CategoryActive} height={20} width={20} />
-        </div>}>
-          {topic}
-        </Menu.Item>
+
+        <NavLink to={`${topic}`}>
+          <Menu.Item key='1' icon={<div> <img src={CategoryActive} height={20} width={20} />
+          </div>}>
+
+            {topic}
+
+          </Menu.Item>
+        </NavLink>
       </Menu>
     )
   );
