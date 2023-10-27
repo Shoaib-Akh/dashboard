@@ -1,0 +1,190 @@
+.content-section {
+
+
+
+
+    &.dashboard {
+
+        // background-color: red;
+
+        // .main {
+        //     height: 100%;
+        //     overflow: hidden;
+
+        // }
+    }
+
+    .card {
+        padding: 2%;
+        height: 122.537px;
+        border-radius: 10.564px;
+        background: var(--light-version-neutral, #FFF);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+
+        @media (max-width: 1000px) {
+
+            margin-right: 20px;
+
+        }
+    }
+
+    .full-width {
+        @media (max-width: 768px) {
+
+            width: -webkit-fill-available;
+
+        }
+    }
+
+    .number {
+        color: var(--light-version-text, #06152B);
+        font-family: DM Sans;
+        font-size: 24.064px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+    }
+
+    .text {
+        color: var(--light-version-text, #06152B);
+        font-family: DM Sans;
+        font-size: 15.021px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        .number {
+            font-size: 18px;
+            /* Adjust the font size for smaller screens */
+        }
+
+        .text {
+            font-size: 12px;
+            /* Adjust the font size for smaller screens */
+        }
+
+        .card {
+            margin-top: 10px;
+            /* Adjust the margin for smaller screens */
+        }
+    }
+
+
+
+
+
+    @media (max-width: 768px) {
+        .content-section .ant-row {
+            justify-content: center;
+        }
+
+        .ant-layout-content {
+            margin: 0% !important;
+        }
+    }
+
+}
+
+.doughnut-chart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 368px;
+    padding: 10px;
+
+    .legend {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px;
+            gap: 10px;
+
+            .legend-color {
+                width: 15px;
+                height: 15px;
+                flex-shrink: 0;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+// DoughnutChart.scss
+
+
+
+.order-container {
+    display: flex;
+
+    /* Stack items vertically on smaller screens */
+    gap: 20px;
+    /* Reduce the gap between items for smaller screens */
+
+    img {
+        height: 100px;
+        width: 100px;
+        /* You can adjust the image size for smaller screens if needed */
+    }
+
+    .order-details {
+        h3 {
+            color: var(--light-version-text, #06152B);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            color: var(--light-version-text, #06152B);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+
+    @media (max-width: 768px) {
+        img {
+            height: 80px;
+            /* Adjust the image size for smaller screens */
+            width: 80px;
+        }
+
+        .order-details {
+            h3 {
+                font-size: 14px;
+                /* Adjust the font size for smaller screens */
+                margin-bottom: 3px;
+                /* Reduce the margin for smaller screens */
+            }
+
+            h4 {
+                font-size: 14px;
+                /* Adjust the font size for smaller screens */
+            }
+        }
+    }
+}
+
+.ant-card-head {
+    border-bottom: unset !important;
+}
+
+.ant-table-wrapper .ant-table-column-sorters {
+    display: flow-root
+}

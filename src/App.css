@@ -1,0 +1,40 @@
+.content-section {
+
+  max-height: calc(100vh-3vh);
+  min-width: calc(100% - 312px);
+  height: 82vh;
+  overflow-x: hidden !important;
+
+  @media (max-width: 768px) {
+    /* Adjust padding and margin for smaller screens */
+    margin: 12px 8px;
+    padding: 12px;
+  }
+}
+
+body {
+  background-color: #F1F4FA;
+  height: 100%;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .ant-layout-content {
+    margin: 0% !important;
+
+  }
+
+  .ant-card-body {
+    padding: 10px !important;
+  }
+
+}
+
+.content {
+  margin: 20px;
+}
+
+.ant-layout .ant-layout-sider-light {
+  height: 90vh !important;
+
+}

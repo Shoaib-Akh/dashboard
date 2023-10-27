@@ -1,0 +1,93 @@
+.navbar {
+  background-color: white;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 992px) {
+  .menu {
+    display: none;
+  }
+}
+
+.logo {
+  height: 32px;
+  margin-left: 1rem;
+}
+
+.DatePicker {
+  text-align: end;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+:where(.css-dev-only-do-not-override-3mqfnx).ant-menu-light .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-3mqfnx).ant-menu-light>.ant-menu .ant-menu-item-selected {
+  background-color: transparent !important;
+  border-radius: 0%;
+  padding-left: 0;
+
+
+}
+
+// .ant-menu .ant-menu-item-selected {
+//     height: 34px;
+//     height: 34px;
+//     opacity: 0.2;
+//     // background: var(--light-version-text-light, #99B2C6);
+// }
+
+
+// li.ant-menu-item-selected div {
+//     padding: 10px;
+//     border-radius: 0px !important;
+//     background-color: red;
+
+// }
+
+li.ant-menu-item {
+  padding: 0px !important;
+}
+
+li.ant-menu-item-selected div {
+  padding: 10px;
+  background: #99B2C6;
+  border-radius: 0px 5.282px 5.282px 0px;
+
+
+
+
+}
+
+li.ant-menu-item div {
+  padding: 8px 2px 9px 15px;
+
+}
+
+.ant-menu-title-content {
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+}
+
+.ant-layout-sider-light {
+  background-color: #fff !important;
+}
+
+
+.freeAccount {
+  color: var(--light-version-text, #06152B);
+
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+  margin-top: 3px;
+}

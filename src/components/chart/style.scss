@@ -1,0 +1,30 @@
+.scrollable-container {
+
+  width: 1050px;
+  height: 440px;
+
+
+  /* This property makes the content scrollable */
+}
+
+/* Add media query for small screens */
+@media (max-width: 884px) {
+  .scrollable-container {
+    width: 500px !important;
+    overflow-x: scroll;
+    padding: 10px;
+
+
+  }
+
+  @media (max-width: 460px) {
+    .scrollable-container {
+      width: 321px !important;
+      overflow-x: scroll;
+      padding: 0px;
+
+
+    }
+  }
+
+}
