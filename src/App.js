@@ -8,9 +8,10 @@ import SideBar from "./components/SideBar/SideBar";
 import Dashboard from './screen/dashBoard';
 import Invoice from "./screen/Invoice";
 import Schedule from "./screen/Schedule";
+import TaskPreview from "./screen/TaskPreview";
 
 function App() {
-  const topics = ["Dashboard", "Invoice", "Schedule"];
+  const topics = ["Dashboard", "Invoice", "Schedule", "TaskPreview"];
 
   const Menu = (
     <TopicMenu topics={topics} />
@@ -26,6 +27,9 @@ function App() {
               <Route index path="/Dashboard" element={<Dashboard />} />
               <Route path="Invoice" element={<Invoice />} />
               <Route path="Schedule" element={<Schedule />} />
+              <Route path="TaskPreview" element={<TaskPreview />} />
+
+
 
 
             </Routes>

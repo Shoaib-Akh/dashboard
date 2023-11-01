@@ -44,5 +44,15 @@
         // .ant-table-wrapper table {
         //     background-color: #F1F4FA;
         // }
+        .ant-table-wrapper .ant-table-tbody>tr>td {
+            border-bottom: 21px solid #F1F4FA;
+
+        }
+
+        .ant-table {
+            border: unset !important;
+        }
     }
+
+
 }

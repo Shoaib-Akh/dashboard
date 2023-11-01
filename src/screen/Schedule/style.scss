@@ -1,16 +1,17 @@
 .content-section {
 
 
-    overflow: hidden;
 
-    @media (max-width: 900px) {
-        margin: 20px;
-        overflow: scroll !important;
-
-        /* Adjust the maximum width for smaller screens */
-    }
 
     &.Schedule {
+        overflow: hidden;
+
+        @media (max-width: 900px) {
+            margin: 20px;
+            overflow: scroll !important;
+
+            /* Adjust the maximum width for smaller screens */
+        }
 
         // background-color: red;
 
@@ -48,7 +49,68 @@
             line-height: normal;
             margin-top: 0px;
             opacity: 0.5;
+            margin-bottom: 3px;
         }
+
+        .ant-table-wrapper .ant-table-tbody>tr>td {
+            border-bottom: 21px solid #F1F4FA;
+
+        }
+
+        .ant-table {
+            border: unset !important;
+        }
+
+        .last-btn {
+            width: 206px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-version-primary, #3A36DB);
+
+            font-family: DM Sans;
+            font-size: 14.22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-radius: 7px;
+            border: 1px solid var(--light-version-text-light, #99B2C6);
+            margin-top: 10px;
+
+
+        }
+
+        .heading-side {
+            color: var(--light-version-text, #06152B);
+
+            /* H6 */
+            font-family: DM Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+
+        // .ant-picker-body {
+        //     max-width: 220px;
+        //     overflow: scroll;
+        // }
+        .wrapperStyle {
+            border: 1px solid #F1F4FA;
+            margin-top: 10px;
+            border-radius: 7px;
+            text-align: "center";
+
+            @media (max-width: 1300px) {
+                min-width: 175px;
+                overflow: scroll;
+
+                /* Adjust the maximum width for smaller screens */
+            }
+        }
+
     }
 
     .date-text {
@@ -78,17 +140,34 @@
     .left-div {
 
         background-color: rgb(255, 255, 255);
-        padding: 30px;
+        padding: 10px 20px;
 
-        width: fit-content;
+        height: 100vh;
 
-        @media (min-width:1056) {
+        @media (max-width:1056px) {
             overflow: scroll;
             position: relative;
-            width: 200px;
-            /* Adjust the maximum width for smaller screens */
+            // width: 200px;
+            height: unset;
+            margin-bottom: 20px;
         }
+
+        @media (max-width:900px) {
+            margin-bottom: 20px;
+            height: unset !important;
+
+        }
+
+        .ant-picker-content td {
+            width: 20px !important;
+            padding: 2px !important;
+        }
+
     }
 
 
+}
+
+.ant-picker-calendar-mini .ant-picker-content {
+    height: unset;
 }

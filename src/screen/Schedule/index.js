@@ -16,6 +16,7 @@ import Location from "../../asset/Location.svg"
 import unActiveStar from "../../asset/unActiveStar.svg"
 import detailsUnActive from "../../asset/detailsUnActive.svg"
 import "./style.scss"
+import { Link } from 'react-router-dom';
 const Schedule = () => {
     const columns = [
 
@@ -150,6 +151,7 @@ const Schedule = () => {
         border: 'none',  // Remove the border
         marginBottom: 0, // Remove the margin at the bottom
     };
+
     return (
         // <div>Schedule</div>
 
@@ -160,7 +162,9 @@ const Schedule = () => {
                 <Col
                     lg={6}
                     md={24}
+
                     sm={24}
+
                 >
                     <div className='left-div'>
                         <div style={{ textAlign: "center" }}>
@@ -178,10 +182,10 @@ const Schedule = () => {
                             <Calender />
                             {/* </div> */}
                         </div>
-                        <div style={{ marginTop: 20 }}>
-                            <h3>Community</h3>
+                        <div style={{ marginTop: 10 }}>
+                            <p className='heading-side'>Community</p>
                             <Input size="large" placeholder="Search for People" prefix={<SearchOutlined />} />
-                            <div style={{ display: "flex", alignItems: "center", gap: 20, borderBottom: "1px solid gray", marginTop: 20 }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: 20, borderBottom: "1px solid gray", marginTop: 10 }}>
 
                                 <div style={{
                                     background: "red",
@@ -238,12 +242,22 @@ const Schedule = () => {
 
                                 </div>
                             </div>
+
+                            {/* <Button onClick={() => navigator.navigate("Task Preview")} /> */}
                         </div>
+                        <Link to="Taskpreview" style={{
+                            display: "flex",
+                            justifyContent: "center"
+                        }}>
+                            <div className='last-btn'>
+                                My Schedule
+                            </div>
+                        </Link>
                     </div>
 
                 </Col>
                 <Col
-                    xs={18}
+
                     lg={17}
                     md={24}
                     sm={24}

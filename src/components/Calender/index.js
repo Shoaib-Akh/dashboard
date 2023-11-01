@@ -23,22 +23,15 @@ const Calender = () => {
         setCurrentMonth(currentMonth.add(1, 'month'));
     };
 
-    const wrapperStyle = {
-        border: "1px solid #F1F4FA",
-        marginTop: 20,
-        borderRadius: "7px",
-        textAlign: "center",
-
-    };
 
     return (
-        <div style={wrapperStyle}>
+        <div className='wrapperStyle'>
             <Calendar
 
                 fullscreen={false}
                 headerRender={({ value }) => {
                     return (
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "20px 20px", }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "10px 20px", }}>
                             <div>
                                 <p className='date-text'>
                                     {selectedDate.format('MMMM,DD-YYYY')}
