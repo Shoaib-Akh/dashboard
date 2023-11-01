@@ -1,0 +1,94 @@
+.content-section {
+
+
+    overflow: hidden;
+
+    @media (max-width: 900px) {
+        margin: 20px;
+        overflow: scroll !important;
+
+        /* Adjust the maximum width for smaller screens */
+    }
+
+    &.Schedule {
+
+        // background-color: red;
+
+        // .main {
+        //     height: 100%;
+        //     overflow: hidden;
+
+        // }
+
+        .ant-input-affix-wrapper-lg {
+            background-color: #F1F4FA;
+            border: unset;
+            height: 45px;
+        }
+
+        .ant-input-affix-wrapper>input.ant-input {
+            background-color: #F1F4FA;
+
+        }
+
+        .name {
+            color: var(--light-version-text, #06152B);
+            font-size: 12.64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+
+        .email {
+            color: var(--light-version-text, #06152B);
+            font-size: 11.24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 0px;
+            opacity: 0.5;
+        }
+    }
+
+    .date-text {
+        color: var(--light-version-text, #06152B);
+        /* Small */
+
+        font-size: 12.64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0%;
+    }
+
+    .ant-picker-calendar .ant-picker-calendar-mini {
+        border-color: #F1F4FA !important;
+        border: 1px solid !important;
+    }
+
+    .schedule-table {
+        height: 100vh;
+        overflow-y: scroll;
+
+
+
+    }
+
+    .left-div {
+
+        background-color: rgb(255, 255, 255);
+        padding: 30px;
+
+        width: fit-content;
+
+        @media (min-width:1056) {
+            overflow: scroll;
+            position: relative;
+            width: 200px;
+            /* Adjust the maximum width for smaller screens */
+        }
+    }
+
+
+}

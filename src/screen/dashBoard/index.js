@@ -42,9 +42,9 @@ export const DashBoard = () => {
 
             </Row>
 
-            <Row gutter={10}>
-                <Col md={16}>
-                    <Card style={{ width: "100%", marginTop: 20 }} >
+            <Row gutter={10} >
+                <Col md={16} className='full-width'  >
+                    <Card style={{ marginTop: 20 }} className='marginSet'>
 
                         <Chart />
                     </Card>
@@ -52,7 +52,7 @@ export const DashBoard = () => {
 
 
                 </Col>
-                <Col md={8} className='full-width'  >
+                <Col md={8} style={{ paddingLeft: 0 }} className='full-width'  >
                     <Card style={{ marginTop: 20 }} title='Analytics' >
                         <PieChart />
                     </Card>
@@ -60,16 +60,16 @@ export const DashBoard = () => {
 
 
             </Row>
-            <Row>
-                <Col md={16}>
+            <Row style={{ marginTop: 20 }} >
+                <Col md={16} className='full-width'>
 
-                    <Card title="Recent Orders" bordered={false} style={{ marginTop: 20, marginRight: 10 }}>
+                    <Card title="Recent Orders" bordered={false} className='marginSet' >
                         <RecentOrdersTable />
 
                     </Card>
                 </Col>
                 <Col md={8} className='full-width'>
-                    <Card title="Top Selling Products" bordered={false} style={{ marginTop: 20 }}>
+                    <Card title="Top Selling Products" bordered={false} className=''>
                         <div style={{ borderBottom: "1px solid #06152B", marginBottom: 20 }}>
                             <div className="order-container">
                                 <img src={product} alt="Logo" height={100} width={100} />

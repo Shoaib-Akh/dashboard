@@ -1,0 +1,48 @@
+.content-section {
+
+
+    &.invoice-table {
+
+        @media (max-width: 900px) {
+            margin: 20px;
+            overflow-x: scroll !important;
+
+            /* Adjust the maximum width for smaller screens */
+        }
+
+
+        .ant-table-thead {
+            background-color: transparent !important;
+        }
+
+        .ant-table {
+            border: none;
+        }
+
+        /* Remove the gap between rows */
+
+
+        /* Optionally, you can set a custom border for table cells if needed */
+
+
+        // .rowClassName1 {
+        //     background-color: #ffff;
+        //     margin-bottom: 10px !important;
+        //     border-color: #f5f5f5;
+
+        //     border-bottom: 20px solid red;
+
+
+        // }
+
+        // .ant-table-wrapper .ant-table-tbody>tr>td {
+        //     border-bottom: 21px solid #F1F4FA;
+        //     // height: 20px;
+        // }
+
+
+        // .ant-table-wrapper table {
+        //     background-color: #F1F4FA;
+        // }
+    }
+}

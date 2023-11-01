@@ -38,52 +38,53 @@
 .table-container {
     max-height: 786px;
     overflow-y: auto;
-}
 
 
 
-.ant-table-thead .ant-table-cell {
-    background-color: white !important;
-}
 
-.ant-table {
-    border: unset !important;
+    .ant-table-thead .ant-table-cell {
+        background-color: white !important;
+    }
 
-}
+    .ant-table {
+        border: unset !important;
+
+    }
 
 
 
-.ant-table-tbody>tr>td,
-.ant-table-thead>tr>th {
-    padding: 14px !important;
-}
+    .ant-table-tbody>tr>td,
+    .ant-table-thead>tr>th {
+        padding: 14px !important;
+    }
 
-tr:nth-child(odd) {
-    background: #fafafa;
-}
+    tr:nth-child(odd) {
+        background: #fafafa;
+    }
 
-tr:nth-child(even) {
-    background: white;
-}
+    tr:nth-child(even) {
+        background: white;
+    }
 
-thead[class*="ant-table-thead"] th {
-    background-color: #000 !important;
-    color: white;
-    font-weight: bold;
-    border-color: #000;
-    text-align: center;
-}
+    thead[class*="ant-table-thead"] th {
+        background-color: #000 !important;
 
-.table_btn {
-    margin: 0 !important;
-}
+        font-weight: bold;
+        border-color: #000;
 
-.ant-btn {
-    margin: 0;
-}
+    }
 
-.ant-table-tbody>tr:hover>td {
-    color: gray;
+    .table_btn {
+        margin: 0 !important;
+    }
+
+    .ant-btn {
+        margin: 0;
+    }
+
+    .ant-table-tbody>tr:hover>td {
+        color: gray;
+    }
 }
 
 // DoughnutChart.scss

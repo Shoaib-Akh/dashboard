@@ -38,3 +38,61 @@ body {
   height: 90vh !important;
 
 }
+
+.ant-table-wrapper .ant-table-thead>tr>th,
+::before {
+  background-color: unset !important;
+}
+
+.ant-picker-calendar .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+  border-radius: 7px;
+
+  box-shadow: #F1F4FA;
+}
+
+.ant-picker-calendar .ant-picker-calendar-mini {
+  border: 1px solid var(--light-version-background, #F1F4FA);
+}
+
+.table-div {
+
+  display: flex;
+  align-Items: center;
+  gap: 20px;
+  white-space: nowrap;
+  color: var(--light-version-text, #06152B);
+  /* Body 2 */
+  font-family: DM Sans;
+  font-size: 14.22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rowClassName1 {
+  padding: 20px 0;
+  /* Adjust the padding as needed to create space between rows */
+}
+
+.rowClassName1 td:first-child {
+  border-top-left-radius: 10px;
+
+}
+
+.rowClassName1 td:last-child {
+  border-top-right-radius: 10px;
+
+}
+
+.ant-table-thead {
+  background-color: transparent !important;
+}
+
+.ant-table-wrapper .ant-table-tbody>tr>td {
+  border-bottom: 21px solid #F1F4FA;
+
+}
+
+.ant-table {
+  border: unset !important;
+}

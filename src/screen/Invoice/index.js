@@ -1,11 +1,45 @@
 import React, { useState } from 'react';
 import { Table } from 'antd';
-import { DeleteOutlined } from '@ant-design/icons';
-import dummy2 from "../../../asset/dummy2.svg"
-import Message from "../../../asset/Message.svg"
-import Calendar from "../../../asset/Calendar.svg"
-import Button from '../../../components/Button/Index';
+import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
+import dummy2 from "../../asset/dummy2.svg"
+import Message from "../../asset/Message.svg"
+import Calendar from "../../asset/Calendar.svg"
+import Button from '../../components/Button/Index';
+import activeStar from "../../asset/activeStar.svg"
+import unActiveStar from "../../asset/unActiveStar.svg"
+import detailsUnActive from "../../asset/detailsUnActive.svg"
+import "./style.scss"
+import { Dropdown } from 'antd';
+const items = [
+    {
+        key: '1',
+        label: (
+            // <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+            <>
+                <EditOutlined style={{ fontSize: '16px', color: '#3A36DB' }} /> &nbsp;
+                <span
+                    style={{ fontSize: '16px', color: '#3A36DB' }}
+                >Edit</span></>
 
+        ),
+    },
+    {
+        key: '2',
+        label: (
+            <>
+                <DeleteOutlined style={{ fontSize: '16px', color: '#FF69B4' }} /> &nbsp;
+                <span
+                    style={{ fontSize: '16px', color: '#FF69B4' }}
+                >Delete</span></>
+
+
+
+
+
+        ),
+    },
+
+];
 const columns = [
     {
         title: 'Invoice Id',
@@ -19,16 +53,17 @@ const columns = [
                 <div style={{
                     display: "flex",
                     alignItems: "center",
-                    gap: 20
+                    gap: 20,
+                    whiteSpace: "nowrap"
                 }}>
                     <div style={{
                         background: "red",
-                        width: "36px",  // Set the same width and height
+                        width: "36px",
                         height: "36px",
-                        borderRadius: "50%",  // Make the border radius 50% for a circle
+                        borderRadius: "50%",
                         display: "flex",
                         alignItems: "center",
-                        justifyContent: "center"  // Center the content vertically and horizontally
+                        justifyContent: "center"
                     }}>
                         <img src={dummy2} alt="Logo" height={20} width={20} />
                     </div>
@@ -65,7 +100,8 @@ const columns = [
                 <div style={{
                     display: "flex",
                     alignItems: "center",
-                    gap: 10
+                    gap: 10,
+                    whiteSpace: "nowrap"
                 }}>
 
                     <img src={Calendar} alt="Logo" height={15} width={15} />
@@ -79,22 +115,17 @@ const columns = [
     {
         title: 'Status',
         dataIndex: 'Status',
+        align: 'center',
         render: (Status) => (
             <>
-                {/* <div style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 10
-                }}>
 
-                    <img src={Calendar} alt="Logo" height={15} width={15} />
-                    {Date}
-                </div> */}
                 <Button
-                    text="Click Me"
+                    width=" 162px"
+                    height="45px"
+                    text="Complete"
+                    color="rgba(58, 54, 219, 1)"
                     // onClick={handleClick}
-                    backgroundColor="#3A36DB"
-                    color="#3A36DB"
+                    backgroundColor="rgba(58, 54, 219, 0.1)"
                     borderRadius="22.5px"
                     padding="10px"
                 />
@@ -111,6 +142,32 @@ const columns = [
             </span>
         ),
         dataIndex: 'DeleteOutlined',
+        render: (Date) => (
+            <>
+                <div style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 20
+                }}>
+
+                    <img src={activeStar} alt="Logo" height={15} width={15} />
+                    <Dropdown
+                        menu={{
+                            items,
+                        }}
+                        placement="bottomRight"
+                        arrow
+                    >
+                        <img src={detailsUnActive} alt="Logo" height={15} width={15} />
+                    </Dropdown>
+
+
+                    {Date}
+                </div>
+
+
+            </>
+        )
     },
 
 
@@ -127,6 +184,7 @@ for (let i = 0; i < 46; i++) {
     });
 }
 const Invoice = () => {
+
     const [selectedRowKeys, setSelectedRowKeys] = useState([]);
     const [loading, setLoading] = useState(false);
     const start = () => {
@@ -146,8 +204,14 @@ const Invoice = () => {
         onChange: onSelectChange,
     };
     const hasSelected = selectedRowKeys.length > 0;
+    const customTableStyle = {
+        border: 'none',  // Remove the border
+        marginBottom: 0, // Remove the margin at the bottom
+    };
     return (
-        <div className='invoice-table'>
+        // <section className="content-section dashboard">
+
+        <section className='invoice-table content-section'>
             <div
                 style={{
                     marginBottom: 16,
@@ -162,8 +226,14 @@ const Invoice = () => {
                     {hasSelected ? `Selected ${selectedRowKeys.length} items` : ''}
                 </span>
             </div>
-            <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
-        </div>
+            <Table rowSelection={rowSelection} columns={columns} dataSource={data} bordered={false}
+                resposive={"md"}
+                pagination={false}
+                rowClassName={() => "rowClassName1"}
+            />
+        </section>
+        // </section>
+
     );
 };
 export default Invoice;

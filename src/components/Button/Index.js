@@ -1,16 +1,16 @@
 import React from 'react';
 
 function Button(props) {
-    const { text, onClick, backgroundColor, color, borderRadius, padding, coustomStyle } = props;
+    const { text, onClick, backgroundColor, color, borderRadius, padding, coustomStyle, width, height } = props;
 
     const buttonStyle = {
         backgroundColor: backgroundColor,
         color: color,
         borderRadius: borderRadius,
         padding: padding,
-        opacity: 0.1,
-        width: " 162px",
-        height: " 45px",
+
+        width: width,
+        height: height,
         border: "unset"
     };
 

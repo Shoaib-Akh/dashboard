@@ -7,8 +7,10 @@ import logo from "../../asset/logo.png";
 import dummy from "../../asset/dummy.png";
 import Logout from "../../asset/Logout.png";
 import CategoryActive from "../../asset/category.svg";
+import { useLocation } from "react-router-dom";
 
 const NavBar = ({ menu }) => {
+  const location = useLocation();
   const [visible, setVisible] = useState(false);
   return (
     <nav className="navbar">
@@ -33,7 +35,9 @@ const NavBar = ({ menu }) => {
 
         <div className="logo-div">
           <img src={logo} alt="logo" height={64} width={64} />
-          <h2 style={{ marginBottom: 0, marginRight: 25 }}>Dashboard</h2>
+          <h2 style={{ marginBottom: 0, marginRight: 25 }}>
+            {location.pathname.replace("/", "")}
+          </h2>
 
         </div>
 
